@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TalentHub - O talento certo, sem enrolação</title>
+    <meta name="description" content="Marketplace de talentos que conecta profissionais com empresas" />
+    <meta name="author" content="TalentHub" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <meta property="og:title" content="TalentHub - O talento certo, sem enrolação" />
+    <meta property="og:description" content="Marketplace de talentos que conecta profissionais com empresas" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo" onclick="showPage('home')">
+            <div class="logo-icon">T</div>
+            <span class="logo-text">TalentHub</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <button class="nav-item" data-page="home">Início</button>
+            <button class="nav-item" data-page="talents">Talentos</button>
+            <button class="nav-item" data-page="for-companies">Para Empresas</button>
+            <button class="nav-item" data-page="for-professionals">Para Profissionais</button>
+            <button class="nav-item" data-page="how-it-works">Como Funciona</button>
+            <button class="nav-item" data-page="create-profile">Criar Perfil</button>
+          </nav>
+
+          <!-- Search Bar -->
+          <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar talentos..." class="search-input">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <nav class="nav-mobile">
+            <button class="nav-item" data-page="home">Início</button>
+            <button class="nav-item" data-page="talents">Talentos</button>
+            <button class="nav-item" data-page="for-companies">Para Empresas</button>
+            <button class="nav-item" data-page="for-professionals">Para Profissionais</button>
+            <button class="nav-item" data-page="how-it-works">Como Funciona</button>
+            <button class="nav-item" data-page="create-profile">Criar Perfil</button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+      <!-- Home Page -->
+      <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                O talento certo, <br />
+                <span class="text-accent">sem enrolação</span>
+              </h1>
+              <p class="hero-subtitle">
+                Conecte-se com profissionais qualificados que entregam resultados. 
+                Seu próximo job começa aqui.
+              </p>
+              <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="showPage('talents')">
+                  Encontrar Talentos
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <button class="btn btn-secondary" onclick="showPage('create-profile')">
+                  Criar Meu Perfil
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+          <div class="container">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <p class="stat-label">Profissionais Verificados</p>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <p class="stat-label">Projetos Concluídos</p>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">4.8★</div>
+                <p class="stat-label">Avaliação Média</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features">
+          <div class="container">
+            <div class="features-header">
+              <h2 class="section-title">Por que escolher o TalentHub?</h2>
+              <p class="section-subtitle">A plataforma que conecta empresas aos melhores profissionais.</p>
+            </div>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </div>
+                <h3 class="feature-title">Busca Inteligente</h3>
+                <p class="feature-description">Encontre exatamente o profissional que você precisa com filtros avançados.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon secondary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h3 class="feature-title">Comunidade Ativa</h3>
+                <p class="feature-description">Faça parte de uma comunidade de profissionais e empresas engajadas.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon accent">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                  </svg>
+                </div>
+                <h3 class="feature-title">Qualidade Garantida</h3>
+                <p class="feature-description">Todos os profissionais são verificados e avaliados pela comunidade.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta">
+          <div class="container">
+            <div class="cta-content">
+              <h2 class="cta-title">Pronto para encontrar seu próximo talento?</h2>
+              <p class="cta-subtitle">Junte-se a centenas de empresas que já encontraram os profissionais ideais.</p>
+              <button class="btn btn-primary" onclick="showPage('talents')">
+                Começar Agora
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Talents Page -->
+      <div id="talents" class="page">
+        <div class="container">
+          <div class="page-header">
+            <h1 class="page-title">Encontre o talento perfeito</h1>
+            <p class="page-subtitle">Conecte-se com profissionais qualificados para impulsionar seu negócio.</p>
+          </div>
+
+          <div class="filters">
+            <select id="categoryFilter" class="filter-select">
+              <option value="all">Todas as áreas</option>
+              <option value="design">Design</option>
+              <option value="desenvolvimento">Desenvolvimento</option>
+              <option value="marketing">Marketing</option>
+              <option value="video">Vídeo & Audio</option>
+              <option value="redacao">Redação</option>
+              <option value="consultoria">Consultoria</option>
+            </select>
+            
+            <select id="priceFilter" class="filter-select">
+              <option value="all">Qualquer preço</option>
+              <option value="low">Até R$ 3.000</option>
+              <option value="medium">R$ 3.000 - R$ 5.000</option>
+              <option value="high">Acima de R$ 5.000</option>
+            </select>
+            
+            <select id="availabilityFilter" class="filter-select">
+              <option value="all">Todos</option>
+              <option value="available">Disponíveis</option>
+              <option value="busy">Ocupados</option>
+            </select>
+            
+            <button class="filter-clear" onclick="clearFilters()">Limpar filtros</button>
+          </div>
+
+          <div id="talentsGrid" class="talents-grid"></div>
+
+          <div id="noResults" class="no-results" style="display: none;">
+            <div class="no-results-icon">🔍</div>
+            <h3 class="no-results-title">Nenhum talento encontrado</h3>
+            <p class="no-results-text">Tente ajustar os filtros ou buscar por outros termos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Pages -->
+      <div id="for-companies" class="page">
+        <div class="container">
+          <div class="page-content">
+            <div class="page-header center">
+              <h1 class="page-title">Para Empresas</h1>
+              <p class="page-subtitle">Encontre os melhores profissionais para fazer sua empresa crescer.</p>
+            </div>
+            <div class="info-grid">
+              <div class="info-card">
+                <div class="info-icon primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </div>
+                <h3>Busca Inteligente</h3>
+                <p>Encontre exatamente o que precisa com nossa busca por habilidades, localização e orçamento.</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon secondary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                  </svg>
+                </div>
+                <h3>Qualidade Garantida</h3>
+                <p>Todos os profissionais são verificados e avaliados pela comunidade.</p>
+              </div>
+            </div>
+            <div class="page-cta">
+              <button class="btn btn-primary" onclick="showPage('talents')">
+                Começar Agora
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="for-professionals" class="page">
+        <div class="container">
+          <div class="page-content">
+            <div class="page-header center">
+              <h1 class="page-title">Para Profissionais</h1>
+              <p class="page-subtitle">Mostre seu talento e conecte-se com oportunidades incríveis.</p>
+            </div>
+            <div class="professional-cta">
+              <h2>Pronto para crescer sua carreira?</h2>
+              <p>Junte-se a centenas de profissionais que já encontraram seus clientes ideais aqui.</p>
+              <button class="btn btn-white" onclick="showPage('create-profile')">Criar Meu Perfil</button>
+            </div>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <div class="benefit-emoji">🎯</div>
+                <h3>Clientes Qualificados</h3>
+                <p>Receba propostas de empresas que realmente precisam do seu trabalho.</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-emoji">💰</div>
+                <h3>Preços Justos</h3>
+                <p>Defina seus próprios preços e seja valorizado pelo seu trabalho.</p>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-emoji">🚀</div>
+                <h3>Crescimento</h3>
+                <p>Construa sua reputação e expanda sua rede de contatos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="how-it-works" class="page">
+        <div class="container">
+          <div class="page-content">
+            <div class="page-header center">
+              <h1 class="page-title">Como Funciona</h1>
+              <p class="page-subtitle">Conectar talentos nunca foi tão simples.</p>
+            </div>
+            <div class="steps">
+              <div class="step">
+                <div class="step-number primary">1</div>
+                <div class="step-content">
+                  <h3>Busque e Filtre</h3>
+                  <p>Use nossa busca inteligente para encontrar profissionais por área, habilidades e orçamento.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number secondary">2</div>
+                <div class="step-content">
+                  <h3>Analise Perfis</h3>
+                  <p>Veja portfólios, avaliações e informações detalhadas de cada profissional.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number accent">3</div>
+                <div class="step-content">
+                  <h3>Conecte-se</h3>
+                  <p>Entre em contato diretamente com o profissional e inicie sua colaboração.</p>
+                </div>
+              </div>
+            </div>
+            <div class="page-cta">
+              <button class="btn btn-primary" onclick="showPage('talents')">Começar Agora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Create Profile Page -->
+      <div id="create-profile" class="page">
+        <div class="container">
+          <div class="page-content">
+            <div class="page-header center">
+              <h1 class="page-title">Criar Meu Perfil</h1>
+              <p class="page-subtitle">Mostre seu talento para o mundo e conecte-se com oportunidades incríveis.</p>
+            </div>
+            
+            <div class="form-container">
+              <form id="profileForm" class="profile-form">
+                <div class="form-section">
+                  <h3 class="form-section-title">Informações Básicas</h3>
+                  
+                  <div class="form-group">
+                    <label for="profileName" class="form-label">Nome Completo</label>
+                    <input type="text" id="profileName" class="form-input" placeholder="Seu nome completo" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="profileTitle" class="form-label">Título Profissional</label>
+                    <input type="text" id="profileTitle" class="form-input" placeholder="Ex: UX/UI Designer, Desenvolvedor Full Stack, Copywriter..." required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="profileLocation" class="form-label">Localização</label>
+                    <input type="text" id="profileLocation" class="form-input" placeholder="Ex: São Paulo, SP" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="profileImage" class="form-label">URL da Foto de Perfil</label>
+                    <input type="url" id="profileImage" class="form-input" placeholder="https://exemplo.com/sua-foto.jpg">
+                    <small class="form-hint">Cole o link de uma imagem sua (recomendamos usar Unsplash ou similar)</small>
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <h3 class="form-section-title">Sobre Você</h3>
+                  
+                  <div class="form-group">
+                    <label for="profileDescription" class="form-label">Descrição</label>
+                    <textarea id="profileDescription" class="form-textarea" placeholder="Conte sobre você, sua experiência e o que faz de especial. Seja autêntico!" rows="4" required></textarea>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="profileSkills" class="form-label">Habilidades</label>
+                    <input type="text" id="profileSkills" class="form-input" placeholder="Ex: React, Node.js, Design System, Figma, SEO" required>
+                    <small class="form-hint">Separe suas habilidades por vírgula</small>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="profilePortfolio" class="form-label">Link do Portfólio (opcional)</label>
+                    <input type="url" id="profilePortfolio" class="form-input" placeholder="https://seuportfolio.com">
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <h3 class="form-section-title">Informações Profissionais</h3>
+                  
+                  <div class="form-group">
+                    <label for="profilePrice" class="form-label">Preço por Projeto</label>
+                    <input type="text" id="profilePrice" class="form-input" placeholder="Ex: R$ 2.500" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="profileAvailability" class="form-label">Disponibilidade</label>
+                    <select id="profileAvailability" class="form-select" required>
+                      <option value="">Selecione sua disponibilidade</option>
+                      <option value="true">Disponível</option>
+                      <option value="false">Ocupado no momento</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="button" class="btn btn-secondary" onclick="showPage('home')">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Criar Meu Perfil</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal para perfil do talento -->
+    <div id="profileModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalName"></h2>
+          <button class="modal-close" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🎉 Perfil Criado com Sucesso!</h2>
+          <button class="modal-close" onclick="closeSuccessModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p style="margin-bottom: 1.5rem;">Seu perfil foi adicionado ao TalentHub! Agora você faz parte da nossa comunidade de talentos.</p>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-outline" style="flex: 1;" onclick="closeSuccessModal()">Fechar</button>
+            <button class="btn btn-primary" style="flex: 1;" onclick="closeSuccessModal(); showPage('talents')">Ver Talentos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
